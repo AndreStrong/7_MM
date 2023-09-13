@@ -1,0 +1,31 @@
+#include<16F887.h>
+#fuses INTRC_IO, NOWDT, PROTECT, NOLVP, MCLR, NOLVP, NOBROWNOUT
+#use delay(INTERNAL=4000000)
+
+#include <lcd.c>
+
+
+// AQUI VAN LAS MACROS
+
+
+void main()
+{
+   lcd_init();
+   
+   //variables para ubicar cada coordenada de la lcd
+   int x = 16;
+   int y = 2;
+   // variables de posicion para dar continuidad al ciclo while
+   int i, j;
+   int x =16;
+   int y = 2;
+   
+   
+   while(true)
+   {
+      printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA
+      delay_ms(2000);
+   }
+
+}
+

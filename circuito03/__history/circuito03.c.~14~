@@ -1,0 +1,61 @@
+#include<16F887.h>
+#fuses INTRC_IO, NOWDT, PROTECT, NOLVP, MCLR, NOLVP, NOBROWNOUT
+#use delay(INTERNAL=4000000)
+
+#include <lcd.c>
+
+
+// AQUI VAN LAS MACROS
+
+#define LCD_ENABLE_PIN  PIN_E0                                    ////
+#define LCD_RS_PIN      PIN_E1                                    ////
+#define LCD_RW_PIN      PIN_E2                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7                                    ////
+
+
+void main()
+{
+   lcd_init();
+   
+   //variables para ubicar cada coordenada de la lcd
+   int x = 16;
+   int y = 2;
+   // variables de posicion para dar continuidad al ciclo while
+   int i = 0;
+   int j = 0;
+   
+   
+   while(i <= x, j <= y)
+   {
+      //printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA
+      //delay_ms(2000);
+      for(j=1;j <= (y+1);j++){
+         for(i=1;i <= (x+1);i++){
+            lcd_gotoxy(i,j);
+            printf(lcd_putc,"f\H");
+            if(i < x ){
+               lcd_gotoxy(i+1,j)
+               printf("f\O");   
+            }
+            if(i < x-1){
+               lcd_gotoxy(i+2,j);
+               printf("f\L");   
+            }
+            if(i < x-2){
+               lcd_gotoxy(i+3,j);
+               printf("f\A");   
+            }
+            delay_ms(3000);
+         }
+      }
+      
+      i = 1;
+      j = 1;
+      
+   }
+
+}
+

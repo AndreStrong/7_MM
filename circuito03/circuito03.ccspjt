@@ -1,0 +1,20 @@
+[PROJECT]
+Target=circuito03.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=circuito03.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[circuito03.c]
+Type=4
+[mru-list]
+1=circuito03.c
+[Opened Files]
+1=circuito03.c
+2=..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+3=
+[Units]
+Count=1
+1=circuito03 (main)
