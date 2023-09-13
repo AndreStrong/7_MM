@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:51
+CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:59
 
                Filename:   C:\Users\soyan\proyectos_programacion\7_MM\circuito03\circuito03.lst
 
-               ROM used:   370 words (5%)
+               ROM used:   369 words (5%)
                            Largest free fragment is 2048
                RAM used:   6 (2%) at main() level
                            20 (5%) worst case
@@ -775,7 +775,7 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:51
 0103:  CLRF   23
 0104:  CLRF   24
 ....................     
-....................     
+....................    //el ciclo verifica que se reinicien de manera indefinida las variables i y j 
 ....................    while(i <= x, j <= y) 
 0105:  MOVF   23,W
 0106:  SUBWF  21,W
@@ -787,10 +787,12 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:51
 010C:  MOVF   24,W
 010D:  SUBWF  22,W
 010E:  BTFSS  03.0
-010F:  GOTO   171
+010F:  GOTO   170
 ....................    { 
 ....................       //printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA 
 ....................       //delay_ms(2000); 
+....................        
+....................       // filas(2) 
 ....................       for(j=1;j <= (y+1);j++){ 
 0110:  MOVLW  01
 0111:  MOVWF  24
@@ -801,6 +803,7 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:51
 0116:  GOTO   119
 0117:  BTFSC  03.0
 0118:  GOTO   16D
+....................          // columnas (16) 
 ....................          for(i=1;i <= (x+1);i++){ 
 0119:  MOVLW  01
 011A:  MOVWF  23
@@ -811,6 +814,7 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:51
 011F:  GOTO   122
 0120:  BTFSC  03.0
 0121:  GOTO   16B
+....................             //imprimir hola con movimiento de izquierda a derecha y de arriva a abajo 
 ....................             lcd_gotoxy(i,j); 
 0122:  MOVF   23,W
 0123:  MOVWF  26
@@ -904,18 +908,17 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:51
 016C:  GOTO   112
 ....................       } 
 ....................        
-....................       i = 1; 
-016D:  MOVLW  01
-016E:  MOVWF  23
-....................       j = 1; 
-016F:  MOVWF  24
-0170:  GOTO   105
+....................       i = 0; 
+016D:  CLRF   23
+....................       j = 0; 
+016E:  CLRF   24
+016F:  GOTO   105
 ....................        
 ....................    } 
 ....................  
 .................... } 
 ....................  
-0171:  SLEEP
+0170:  SLEEP
 
 Configuration Fuses:
    Word  1: 2CA4   INTRC_IO NOWDT PUT MCLR PROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG

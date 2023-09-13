@@ -57,11 +57,11 @@ Project Directory:
     C:\Users\soyan\proyectos_programacion\7_MM\circuito03\
 
 Project Files:
-    circuito03.c                                            [13-Sep-23 10:49  CRC=E17B97B4]
+    circuito03.c                                            [13-Sep-23 10:59  CRC=C11C41A1]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [12-Nov-13 14:35  CRC=6CB1A611]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c   [19-Sep-13 15:38  CRC=D1A6378A]
 
-Source signature=F179ACD9
+Source signature=D11A56C6
 
 Units:
     circuito03 (main)

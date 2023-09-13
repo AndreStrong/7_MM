@@ -27,17 +27,13 @@ void main()
    int i = 0;
    int j = 0;
    
-   //el ciclo verifica que se reinicien de manera indefinida las variables i y j
+   
    while(i <= x, j <= y)
    {
       //printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA
       //delay_ms(2000);
-      
-      // filas(2)
       for(j=1;j <= (y+1);j++){
-         // columnas (16)
          for(i=1;i <= (x+1);i++){
-            //imprimir hola con movimiento de izquierda a derecha y de arriva a abajo
             lcd_gotoxy(i,j);
             printf(lcd_putc,"f\H");
             if(i < x ){
@@ -56,8 +52,8 @@ void main()
          }
       }
       
-      i = 0;
-      j = 0;
+      i = 1;
+      j = 1;
       
    }
 
