@@ -28,7 +28,7 @@ void main()
    int j = 0;
    
    //el ciclo verifica que se reinicien de manera indefinida las variables i y j
-   while((i <= x) && (j <= y))
+   while((i <= x) y (j <= y))
    {
       //printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA
       //delay_ms(2000);

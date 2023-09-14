@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:59
+CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:00
 
                Filename:   C:\Users\soyan\proyectos_programacion\7_MM\circuito03\circuito03.lst
 
-               ROM used:   369 words (5%)
+               ROM used:   366 words (4%)
                            Largest free fragment is 2048
                RAM used:   6 (2%) at main() level
                            20 (5%) worst case
@@ -776,149 +776,146 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 10:59
 0104:  CLRF   24
 ....................     
 ....................    //el ciclo verifica que se reinicien de manera indefinida las variables i y j 
-....................    while(i <= x, j <= y) 
+....................    while((i <= x) && (j <= y)) 
 0105:  MOVF   23,W
 0106:  SUBWF  21,W
-0107:  BTFSC  03.0
-0108:  GOTO   10B
-0109:  MOVLW  00
-010A:  GOTO   10C
-010B:  MOVLW  01
-010C:  MOVF   24,W
-010D:  SUBWF  22,W
-010E:  BTFSS  03.0
-010F:  GOTO   170
+0107:  BTFSS  03.0
+0108:  GOTO   16D
+0109:  MOVF   24,W
+010A:  SUBWF  22,W
+010B:  BTFSS  03.0
+010C:  GOTO   16D
 ....................    { 
 ....................       //printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA 
 ....................       //delay_ms(2000); 
 ....................        
 ....................       // filas(2) 
 ....................       for(j=1;j <= (y+1);j++){ 
-0110:  MOVLW  01
-0111:  MOVWF  24
-0112:  MOVLW  01
-0113:  ADDWF  22,W
-0114:  SUBWF  24,W
-0115:  BTFSC  03.2
-0116:  GOTO   119
-0117:  BTFSC  03.0
-0118:  GOTO   16D
+010D:  MOVLW  01
+010E:  MOVWF  24
+010F:  MOVLW  01
+0110:  ADDWF  22,W
+0111:  SUBWF  24,W
+0112:  BTFSC  03.2
+0113:  GOTO   116
+0114:  BTFSC  03.0
+0115:  GOTO   16A
 ....................          // columnas (16) 
 ....................          for(i=1;i <= (x+1);i++){ 
-0119:  MOVLW  01
-011A:  MOVWF  23
-011B:  MOVLW  01
-011C:  ADDWF  21,W
-011D:  SUBWF  23,W
-011E:  BTFSC  03.2
-011F:  GOTO   122
-0120:  BTFSC  03.0
-0121:  GOTO   16B
+0116:  MOVLW  01
+0117:  MOVWF  23
+0118:  MOVLW  01
+0119:  ADDWF  21,W
+011A:  SUBWF  23,W
+011B:  BTFSC  03.2
+011C:  GOTO   11F
+011D:  BTFSC  03.0
+011E:  GOTO   168
 ....................             //imprimir hola con movimiento de izquierda a derecha y de arriva a abajo 
 ....................             lcd_gotoxy(i,j); 
-0122:  MOVF   23,W
-0123:  MOVWF  26
-0124:  MOVF   24,W
-0125:  MOVWF  27
-0126:  CALL   0A9
+011F:  MOVF   23,W
+0120:  MOVWF  26
+0121:  MOVF   24,W
+0122:  MOVWF  27
+0123:  CALL   0A9
 ....................             printf(lcd_putc,"f\H"); 
-0127:  MOVLW  66
+0124:  MOVLW  66
+0125:  MOVWF  25
+0126:  CALL   0BB
+0127:  MOVLW  48
 0128:  MOVWF  25
 0129:  CALL   0BB
-012A:  MOVLW  48
-012B:  MOVWF  25
-012C:  CALL   0BB
 ....................             if(i < x ){ 
-012D:  MOVF   21,W
-012E:  SUBWF  23,W
-012F:  BTFSC  03.0
-0130:  GOTO   13E
+012A:  MOVF   21,W
+012B:  SUBWF  23,W
+012C:  BTFSC  03.0
+012D:  GOTO   13B
 ....................                lcd_gotoxy(i+1,j); 
-0131:  MOVLW  01
-0132:  ADDWF  23,W
-0133:  MOVWF  25
-0134:  MOVWF  26
-0135:  MOVF   24,W
-0136:  MOVWF  27
-0137:  CALL   0A9
+012E:  MOVLW  01
+012F:  ADDWF  23,W
+0130:  MOVWF  25
+0131:  MOVWF  26
+0132:  MOVF   24,W
+0133:  MOVWF  27
+0134:  CALL   0A9
 ....................                printf(lcd_putc,"f\O");    
-0138:  MOVLW  66
+0135:  MOVLW  66
+0136:  MOVWF  25
+0137:  CALL   0BB
+0138:  MOVLW  4F
 0139:  MOVWF  25
 013A:  CALL   0BB
-013B:  MOVLW  4F
-013C:  MOVWF  25
-013D:  CALL   0BB
 ....................             } 
 ....................             if(i < x-1){ 
-013E:  MOVLW  01
-013F:  SUBWF  21,W
-0140:  SUBWF  23,W
-0141:  BTFSC  03.0
-0142:  GOTO   150
+013B:  MOVLW  01
+013C:  SUBWF  21,W
+013D:  SUBWF  23,W
+013E:  BTFSC  03.0
+013F:  GOTO   14D
 ....................                lcd_gotoxy(i+2,j); 
-0143:  MOVLW  02
-0144:  ADDWF  23,W
-0145:  MOVWF  25
-0146:  MOVWF  26
-0147:  MOVF   24,W
-0148:  MOVWF  27
-0149:  CALL   0A9
+0140:  MOVLW  02
+0141:  ADDWF  23,W
+0142:  MOVWF  25
+0143:  MOVWF  26
+0144:  MOVF   24,W
+0145:  MOVWF  27
+0146:  CALL   0A9
 ....................                printf(lcd_putc,"f\L");    
-014A:  MOVLW  66
+0147:  MOVLW  66
+0148:  MOVWF  25
+0149:  CALL   0BB
+014A:  MOVLW  4C
 014B:  MOVWF  25
 014C:  CALL   0BB
-014D:  MOVLW  4C
-014E:  MOVWF  25
-014F:  CALL   0BB
 ....................             } 
 ....................             if(i < x-2){ 
-0150:  MOVLW  02
-0151:  SUBWF  21,W
-0152:  SUBWF  23,W
-0153:  BTFSC  03.0
-0154:  GOTO   162
+014D:  MOVLW  02
+014E:  SUBWF  21,W
+014F:  SUBWF  23,W
+0150:  BTFSC  03.0
+0151:  GOTO   15F
 ....................                lcd_gotoxy(i+3,j); 
-0155:  MOVLW  03
-0156:  ADDWF  23,W
-0157:  MOVWF  25
-0158:  MOVWF  26
-0159:  MOVF   24,W
-015A:  MOVWF  27
-015B:  CALL   0A9
+0152:  MOVLW  03
+0153:  ADDWF  23,W
+0154:  MOVWF  25
+0155:  MOVWF  26
+0156:  MOVF   24,W
+0157:  MOVWF  27
+0158:  CALL   0A9
 ....................                printf(lcd_putc,"f\A");    
-015C:  MOVLW  66
+0159:  MOVLW  66
+015A:  MOVWF  25
+015B:  CALL   0BB
+015C:  MOVLW  41
 015D:  MOVWF  25
 015E:  CALL   0BB
-015F:  MOVLW  41
-0160:  MOVWF  25
-0161:  CALL   0BB
 ....................             } 
 ....................             delay_ms(3000); 
-0162:  MOVLW  0C
-0163:  MOVWF  25
-0164:  MOVLW  FA
-0165:  MOVWF  2A
-0166:  CALL   004
-0167:  DECFSZ 25,F
-0168:  GOTO   164
-0169:  INCF   23,F
-016A:  GOTO   11B
+015F:  MOVLW  0C
+0160:  MOVWF  25
+0161:  MOVLW  FA
+0162:  MOVWF  2A
+0163:  CALL   004
+0164:  DECFSZ 25,F
+0165:  GOTO   161
+0166:  INCF   23,F
+0167:  GOTO   118
 ....................          } 
-016B:  INCF   24,F
-016C:  GOTO   112
+0168:  INCF   24,F
+0169:  GOTO   10F
 ....................       } 
 ....................        
 ....................       i = 0; 
-016D:  CLRF   23
+016A:  CLRF   23
 ....................       j = 0; 
-016E:  CLRF   24
-016F:  GOTO   105
+016B:  CLRF   24
+016C:  GOTO   105
 ....................        
 ....................    } 
 ....................  
 .................... } 
 ....................  
-0170:  SLEEP
+016D:  SLEEP
 
 Configuration Fuses:
    Word  1: 2CA4   INTRC_IO NOWDT PUT MCLR PROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG

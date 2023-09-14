@@ -1,5 +1,5 @@
 ÀÄcircuito03
-   ÀÄMAIN  0/138  Ram=1
+   ÀÄMAIN  0/135  Ram=1
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄlcd_init  0/62  Ram=6
       ³  ÃÄ@delay_ms1  0/21  Ram=1
