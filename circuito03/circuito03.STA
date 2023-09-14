@@ -13,11 +13,11 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   66    25  23  circuito03.c
+   70    25  23  circuito03.c
   768     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
   456    84  77  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
 ----- -----
- 1290   109 Total
+ 1294   109 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -35,14 +35,14 @@ Page ROM  %  RAM   Vol Diff  Functions:
 Program metrics:
     Functions               8
     Statements              109
-    Comments                239
+    Comments                243
     Volume (V)              5454
     Difficulty (D)          42.0
     Effort to implement (E) 229256
     Time to implement (T)   3 hours, 32 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   13
-    Maintainability (MI)    135
+    Maintainability (MI)    133
 
  Segment     Used  Free
 -----------  ----  ----

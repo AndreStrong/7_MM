@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:00
+CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:03
 
                Filename:   C:\Users\soyan\proyectos_programacion\7_MM\circuito03\circuito03.lst
 
@@ -825,6 +825,7 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:00
 0127:  MOVLW  48
 0128:  MOVWF  25
 0129:  CALL   0BB
+....................             //imprime el segundo caracter de una cadena siempre que este dentro del valor de x 
 ....................             if(i < x ){ 
 012A:  MOVF   21,W
 012B:  SUBWF  23,W
@@ -846,6 +847,7 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:00
 0139:  MOVWF  25
 013A:  CALL   0BB
 ....................             } 
+....................             //imprime el tercer caracter de una cadena siempre que este dentro del valor de x 
 ....................             if(i < x-1){ 
 013B:  MOVLW  01
 013C:  SUBWF  21,W
@@ -868,6 +870,7 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:00
 014B:  MOVWF  25
 014C:  CALL   0BB
 ....................             } 
+....................             //imprime el cuarto caracter de una cadena siempre que este dentro del valor de x 
 ....................             if(i < x-2){ 
 014D:  MOVLW  02
 014E:  SUBWF  21,W
@@ -890,8 +893,9 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:00
 015D:  MOVWF  25
 015E:  CALL   0BB
 ....................             } 
-....................             delay_ms(3000); 
-015F:  MOVLW  0C
+....................             //genera un perido de espera para que el usuario pueda visulizar la informacion en el lcd 
+....................             delay_ms(1000); 
+015F:  MOVLW  04
 0160:  MOVWF  25
 0161:  MOVLW  FA
 0162:  MOVWF  2A

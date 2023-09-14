@@ -40,23 +40,19 @@ void main()
             //imprimir hola con movimiento de izquierda a derecha y de arriva a abajo
             lcd_gotoxy(i,j);
             printf(lcd_putc,"f\H");
-            //imprime el segundo caracter de una cadena siempre que este dentro del valor de x
             if(i < x ){
                lcd_gotoxy(i+1,j);
                printf(lcd_putc,"f\O");   
             }
-            //imprime el tercer caracter de una cadena siempre que este dentro del valor de x
             if(i < x-1){
                lcd_gotoxy(i+2,j);
                printf(lcd_putc,"f\L");   
             }
-            //imprime el cuarto caracter de una cadena siempre que este dentro del valor de x
             if(i < x-2){
                lcd_gotoxy(i+3,j);
                printf(lcd_putc,"f\A");   
             }
-            //genera un perido de espera para que el usuario pueda visulizar la informacion en el lcd
-            delay_ms(1000);
+            delay_ms(3000);
          }
       }
       
