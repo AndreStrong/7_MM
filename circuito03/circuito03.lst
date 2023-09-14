@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:03
+CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:48
 
                Filename:   C:\Users\soyan\proyectos_programacion\7_MM\circuito03\circuito03.lst
 
-               ROM used:   366 words (4%)
+               ROM used:   359 words (4%)
                            Largest free fragment is 2048
                RAM used:   6 (2%) at main() level
                            20 (5%) worst case
@@ -776,150 +776,144 @@ CCS PCM C Compiler, Version 5.015, 5967               13-Sep-23 21:03
 0104:  CLRF   24
 ....................     
 ....................    //el ciclo verifica que se reinicien de manera indefinida las variables i y j 
-....................    while((i <= x) && (j <= y)) 
-0105:  MOVF   23,W
-0106:  SUBWF  21,W
-0107:  BTFSS  03.0
-0108:  GOTO   16D
-0109:  MOVF   24,W
-010A:  SUBWF  22,W
-010B:  BTFSS  03.0
-010C:  GOTO   16D
+....................    while(true) 
 ....................    { 
 ....................       //printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA 
 ....................       //delay_ms(2000); 
 ....................        
 ....................       // filas(2) 
 ....................       for(j=1;j <= (y+1);j++){ 
-010D:  MOVLW  01
-010E:  MOVWF  24
-010F:  MOVLW  01
-0110:  ADDWF  22,W
-0111:  SUBWF  24,W
-0112:  BTFSC  03.2
-0113:  GOTO   116
-0114:  BTFSC  03.0
-0115:  GOTO   16A
+0105:  MOVLW  01
+0106:  MOVWF  24
+0107:  MOVLW  01
+0108:  ADDWF  22,W
+0109:  SUBWF  24,W
+010A:  BTFSC  03.2
+010B:  GOTO   10E
+010C:  BTFSC  03.0
+010D:  GOTO   163
 ....................          // columnas (16) 
 ....................          for(i=1;i <= (x+1);i++){ 
-0116:  MOVLW  01
-0117:  MOVWF  23
-0118:  MOVLW  01
-0119:  ADDWF  21,W
-011A:  SUBWF  23,W
-011B:  BTFSC  03.2
-011C:  GOTO   11F
-011D:  BTFSC  03.0
-011E:  GOTO   168
+010E:  MOVLW  01
+010F:  MOVWF  23
+0110:  MOVLW  01
+0111:  ADDWF  21,W
+0112:  SUBWF  23,W
+0113:  BTFSC  03.2
+0114:  GOTO   117
+0115:  BTFSC  03.0
+0116:  GOTO   161
 ....................             //imprimir hola con movimiento de izquierda a derecha y de arriva a abajo 
 ....................             lcd_gotoxy(i,j); 
-011F:  MOVF   23,W
-0120:  MOVWF  26
-0121:  MOVF   24,W
-0122:  MOVWF  27
-0123:  CALL   0A9
+0117:  MOVF   23,W
+0118:  MOVWF  26
+0119:  MOVF   24,W
+011A:  MOVWF  27
+011B:  CALL   0A9
 ....................             printf(lcd_putc,"f\H"); 
-0124:  MOVLW  66
-0125:  MOVWF  25
-0126:  CALL   0BB
-0127:  MOVLW  48
-0128:  MOVWF  25
-0129:  CALL   0BB
+011C:  MOVLW  66
+011D:  MOVWF  25
+011E:  CALL   0BB
+011F:  MOVLW  48
+0120:  MOVWF  25
+0121:  CALL   0BB
 ....................             //imprime el segundo caracter de una cadena siempre que este dentro del valor de x 
-....................             if(i < x ){ 
-012A:  MOVF   21,W
-012B:  SUBWF  23,W
-012C:  BTFSC  03.0
-012D:  GOTO   13B
-....................                lcd_gotoxy(i+1,j); 
-012E:  MOVLW  01
-012F:  ADDWF  23,W
-0130:  MOVWF  25
-0131:  MOVWF  26
-0132:  MOVF   24,W
-0133:  MOVWF  27
-0134:  CALL   0A9
+....................             if((i+1) <= x ){ 
+0122:  MOVLW  01
+0123:  ADDWF  23,W
+0124:  SUBWF  21,W
+0125:  BTFSS  03.0
+0126:  GOTO   134
+....................                lcd_gotoxy((i+1),j); 
+0127:  MOVLW  01
+0128:  ADDWF  23,W
+0129:  MOVWF  25
+012A:  MOVWF  26
+012B:  MOVF   24,W
+012C:  MOVWF  27
+012D:  CALL   0A9
 ....................                printf(lcd_putc,"f\O");    
-0135:  MOVLW  66
-0136:  MOVWF  25
-0137:  CALL   0BB
-0138:  MOVLW  4F
-0139:  MOVWF  25
-013A:  CALL   0BB
+012E:  MOVLW  66
+012F:  MOVWF  25
+0130:  CALL   0BB
+0131:  MOVLW  4F
+0132:  MOVWF  25
+0133:  CALL   0BB
 ....................             } 
 ....................             //imprime el tercer caracter de una cadena siempre que este dentro del valor de x 
-....................             if(i < x-1){ 
-013B:  MOVLW  01
-013C:  SUBWF  21,W
-013D:  SUBWF  23,W
-013E:  BTFSC  03.0
-013F:  GOTO   14D
-....................                lcd_gotoxy(i+2,j); 
-0140:  MOVLW  02
-0141:  ADDWF  23,W
-0142:  MOVWF  25
-0143:  MOVWF  26
-0144:  MOVF   24,W
-0145:  MOVWF  27
-0146:  CALL   0A9
+....................             if((i+2) <= x){ 
+0134:  MOVLW  02
+0135:  ADDWF  23,W
+0136:  SUBWF  21,W
+0137:  BTFSS  03.0
+0138:  GOTO   146
+....................                lcd_gotoxy((i+2),j); 
+0139:  MOVLW  02
+013A:  ADDWF  23,W
+013B:  MOVWF  25
+013C:  MOVWF  26
+013D:  MOVF   24,W
+013E:  MOVWF  27
+013F:  CALL   0A9
 ....................                printf(lcd_putc,"f\L");    
-0147:  MOVLW  66
-0148:  MOVWF  25
-0149:  CALL   0BB
-014A:  MOVLW  4C
-014B:  MOVWF  25
-014C:  CALL   0BB
+0140:  MOVLW  66
+0141:  MOVWF  25
+0142:  CALL   0BB
+0143:  MOVLW  4C
+0144:  MOVWF  25
+0145:  CALL   0BB
 ....................             } 
 ....................             //imprime el cuarto caracter de una cadena siempre que este dentro del valor de x 
-....................             if(i < x-2){ 
-014D:  MOVLW  02
-014E:  SUBWF  21,W
-014F:  SUBWF  23,W
-0150:  BTFSC  03.0
-0151:  GOTO   15F
-....................                lcd_gotoxy(i+3,j); 
-0152:  MOVLW  03
-0153:  ADDWF  23,W
-0154:  MOVWF  25
-0155:  MOVWF  26
-0156:  MOVF   24,W
-0157:  MOVWF  27
-0158:  CALL   0A9
+....................             if((i+3) <= x){ 
+0146:  MOVLW  03
+0147:  ADDWF  23,W
+0148:  SUBWF  21,W
+0149:  BTFSS  03.0
+014A:  GOTO   158
+....................                lcd_gotoxy((i+3),j); 
+014B:  MOVLW  03
+014C:  ADDWF  23,W
+014D:  MOVWF  25
+014E:  MOVWF  26
+014F:  MOVF   24,W
+0150:  MOVWF  27
+0151:  CALL   0A9
 ....................                printf(lcd_putc,"f\A");    
-0159:  MOVLW  66
-015A:  MOVWF  25
-015B:  CALL   0BB
-015C:  MOVLW  41
-015D:  MOVWF  25
-015E:  CALL   0BB
+0152:  MOVLW  66
+0153:  MOVWF  25
+0154:  CALL   0BB
+0155:  MOVLW  41
+0156:  MOVWF  25
+0157:  CALL   0BB
 ....................             } 
 ....................             //genera un perido de espera para que el usuario pueda visulizar la informacion en el lcd 
 ....................             delay_ms(1000); 
-015F:  MOVLW  04
-0160:  MOVWF  25
-0161:  MOVLW  FA
-0162:  MOVWF  2A
-0163:  CALL   004
-0164:  DECFSZ 25,F
-0165:  GOTO   161
-0166:  INCF   23,F
-0167:  GOTO   118
+0158:  MOVLW  04
+0159:  MOVWF  25
+015A:  MOVLW  FA
+015B:  MOVWF  2A
+015C:  CALL   004
+015D:  DECFSZ 25,F
+015E:  GOTO   15A
+015F:  INCF   23,F
+0160:  GOTO   110
+....................              
 ....................          } 
-0168:  INCF   24,F
-0169:  GOTO   10F
+0161:  INCF   24,F
+0162:  GOTO   107
 ....................       } 
 ....................        
 ....................       i = 0; 
-016A:  CLRF   23
+0163:  CLRF   23
 ....................       j = 0; 
-016B:  CLRF   24
-016C:  GOTO   105
+0164:  CLRF   24
+0165:  GOTO   105
 ....................        
 ....................    } 
 ....................  
 .................... } 
 ....................  
-016D:  SLEEP
+0166:  SLEEP
 
 Configuration Fuses:
    Word  1: 2CA4   INTRC_IO NOWDT PUT MCLR PROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG

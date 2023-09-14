@@ -28,7 +28,7 @@ void main()
    int j = 0;
    
    //el ciclo verifica que se reinicien de manera indefinida las variables i y j
-   while((i <= x) && (j <= y))
+   while(true)
    {
       //printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA
       //delay_ms(2000);
@@ -41,22 +41,23 @@ void main()
             lcd_gotoxy(i,j);
             printf(lcd_putc,"f\H");
             //imprime el segundo caracter de una cadena siempre que este dentro del valor de x
-            if(i < x ){
-               lcd_gotoxy(i+1,j);
+            if((i+1) <= x ){
+               lcd_gotoxy((i+1),j);
                printf(lcd_putc,"f\O");   
             }
             //imprime el tercer caracter de una cadena siempre que este dentro del valor de x
-            if(i < x-1){
-               lcd_gotoxy(i+2,j);
+            if((i+2) <= x){
+               lcd_gotoxy((i+2),j);
                printf(lcd_putc,"f\L");   
             }
             //imprime el cuarto caracter de una cadena siempre que este dentro del valor de x
-            if(i < x-2){
-               lcd_gotoxy(i+3,j);
+            if((i+3) <= x){
+               lcd_gotoxy((i+3),j);
                printf(lcd_putc,"f\A");   
             }
             //genera un perido de espera para que el usuario pueda visulizar la informacion en el lcd
             delay_ms(1000);
+            
          }
       }
       
