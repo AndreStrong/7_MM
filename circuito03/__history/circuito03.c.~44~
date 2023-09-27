@@ -24,7 +24,7 @@ void main(){
    
    while(TRUE){
      
-      printf(LCD_PUTC,"\fConteo %f ", 3.3*k);
+      printf(LCD_PUTC,"\fConteo %d ", 3.3*k);
       lcd_gotoxy(1,2);
       printf(LCD_PUTC, "El valor k=%u",k++);
       delay_ms(500);

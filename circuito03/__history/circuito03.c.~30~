@@ -1,0 +1,7 @@
+#include<16F887.h>
+#fuses INTRC_IO, NOWDT, PROTECT, NOLVP, MCLR, NOLVP, NOBROWNOUT
+#use delay(INTERNAL=4000000)
+
+#include <lcd.c>
+
+

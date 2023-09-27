@@ -15,18 +15,17 @@
 #include <lcd.c>
 
 void main(){
-   char k=0;
+   char k;
    
    
    lcd_init();
    lcd_putc("\fReady...\n");
-   delay_ms(1000);
    
    while(TRUE){
      
-      printf(LCD_PUTC,"\fConteo %f ", 3.3*k);
-      lcd_gotoxy(1,2);
-      printf(LCD_PUTC, "El valor k=%u",k++);
+      lcd_putc("\fHola mundo");
+      lcd_goto_xy(2,5);
+      lcd_putc("\fDesde LCD");
       delay_ms(500);
       
    }

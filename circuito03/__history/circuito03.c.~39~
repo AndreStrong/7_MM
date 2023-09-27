@@ -20,11 +20,10 @@ void main(){
    
    lcd_init();
    lcd_putc("\fReady...\n");
-   delay_ms(1000);
    
    while(TRUE){
      
-      printf(LCD_PUTC,"\fConteo %f ", 3.3*k);
+      lcd_putc("\fHola mundo");
       lcd_gotoxy(1,2);
       printf(LCD_PUTC, "El valor k=%u",k++);
       delay_ms(500);

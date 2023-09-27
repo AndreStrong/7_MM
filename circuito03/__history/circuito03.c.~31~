@@ -1,0 +1,23 @@
+#include<16F887.h>
+#fuses INTRC_IO, NOWDT, PROTECT, NOLVP, MCLR, NOLVP, NOBROWNOUT
+#use delay(INTERNAL=4000000)
+//asigna un pueto completo se empleara para la conexion al LCD
+#define LCD_DATA_PORT getenv("SFR:PORTD") 
+
+
+#include <lcd.c>
+
+void main(){
+   char k;
+   
+   lcd_init();
+   lcd_putc("\fReady...\n");
+   
+   while(TRUE){
+      //EJEMPLO de uso de pantalla lcd 16x2
+      
+      
+      
+      
+   }
+}

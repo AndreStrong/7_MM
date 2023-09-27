@@ -1,0 +1,70 @@
+#include<16F887.h>
+#fuses INTRC_IO, NOWDT, PROTECT, NOLVP, MCLR, NOLVP, NOBROWNOUT
+#use delay(INTERNAL=4000000)
+
+#include <lcd.c>
+
+
+// AQUI VAN LAS MACROS
+
+#define LCD_ENABLE_PIN  PIN_E0                                    ////
+#define LCD_RS_PIN      PIN_E1                                    ////
+#define LCD_RW_PIN      PIN_E2                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7                                    ////
+
+
+void main()
+{
+   lcd_init();
+   
+   //variables para ubicar cada coordenada de la lcd
+   int x = 16;
+   int y = 2;
+   // variables de posicion para dar continuidad al ciclo while
+   int i = 0;
+   int j = 0;
+   
+   //el ciclo verifica que se reinicien de manera indefinida las variables i y j
+   while(true)
+   {
+      //printf(lcd_putc, "f\Hello there"); //     SE HACE CLEAR EN PANTALLA
+      //delay_ms(2000);
+      
+      // filas(2)
+      for(j=1;j <= (y+1);j++){
+         // columnas (16)
+         for(i=1;i <= (x+1);i++){
+            //imprimir hola con movimiento de izquierda a derecha y de arriva a abajo
+            lcd_gotoxy(i,j);
+            printf(lcd_putc,"f\H");
+            //imprime el segundo caracter de una cadena siempre que este dentro del valor de x
+            if((i+1) <= x ){
+               lcd_gotoxy((i+1),j);
+               printf(lcd_putc,"f\O");   
+            }
+            //imprime el tercer caracter de una cadena siempre que este dentro del valor de x
+            if((i+2) <= x){
+               lcd_gotoxy((i+2),j);
+               printf(lcd_putc,"f\L");   
+            }
+            //imprime el cuarto caracter de una cadena siempre que este dentro del valor de x
+            if((i+3) <= x){
+               lcd_gotoxy((i+3),j);
+               printf(lcd_putc,"f\A");   
+            }
+            //genera un perido de espera para que el usuario pueda visulizar la informacion en el lcd
+            delay_ms(1000);
+            
+         }
+      }
+      
+      i = 0;
+      j = 0;
+      
+   }
+
+}
+
