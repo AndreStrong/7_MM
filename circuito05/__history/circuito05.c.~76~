@@ -69,11 +69,10 @@ void main(){
          output_high(PIN_C5);
          valor_pwm_izq = (127-iAdc)*2;
          set_pwm1_duty(valor_pwm_izq);
-         valor_porcentaje_izq = (100.0/255.0) * (float)valor_pwm_izq;
          lcd_gotoxy(1,1);
          printf(lcd_putc,"Izquierda");
          lcd_gotoxy(1,2);
-         printf(lcd_putc, "Vel=%.2f %%", valor_porcentaje_izq);
+         printf(lcd_putc, "Vel=%u %%", valor_pwm_izq);
       }
       
            

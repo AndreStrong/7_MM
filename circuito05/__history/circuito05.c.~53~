@@ -13,10 +13,10 @@
 void main(){
 
    // se establecen variables para calcular el valor del PWM y su respectivo valor en porcentaje
-   int8 valor_pwm_der;
-   float valor_porcentaje_der;
-   int8 valor_pwm_izq;
-   float valor_porcentaje_izq;
+   float valor_pwm_der;
+   //float valor_porcentaje_der;
+   //float valor_pwm_izq;
+   //float valor_porcentaje_izq;
    
    
    int8 iAdc; //  variable que captura el valor adimencional recibido desde el port analogico
@@ -39,7 +39,10 @@ void main(){
       set_adc_channel(0); //configura el AN0 como entrada analogica
       delay_ms(10);
       iAdc = read_adc(); // asocia el valor leido desde el puerto adc a la variable previamente definida  
-      
+      valor_pwm_der = (iAdc-127)*2;
+      //valor_porcentaje_der = (100/255) * valor_pwm_der;  
+      //valor_pwm_izq = (127-iAdc)*2;
+      //valor_porcentaje_izq = (100/255) * valor_pwm_izq;
        
       printf(lcd_putc, "\f");
       
@@ -51,33 +54,31 @@ void main(){
          lcd_gotoxy(1,1);
          printf(lcd_putc,"Reposo");
          lcd_gotoxy(1,2);
-         printf(lcd_putc, "Vel=%.2f %%", 0.00);
+         printf(lcd_putc, "Vel=0");
       }
       else if(iAdc > 127){
          output_high(PIN_C4);
          output_low(PIN_C5);
-         valor_pwm_der = ((iAdc-127)*2)-1;
-         set_pwm1_duty(valor_pwm_der);
-         valor_porcentaje_der = (100.0/254.0) * (float)valor_pwm_der;
+         
+         set_pwm1_duty((iAdc-127)*2);
          lcd_gotoxy(1,1);
          printf(lcd_putc,"Derecha");
          lcd_gotoxy(1,2);
-         printf(lcd_putc, "Vel=%.2f %%", valor_porcentaje_der);
+         printf(lcd_putc, "Vel=%.2f %%", (float)((100/255)*((iAdc-127)*2)) );
       }
       else{
          output_low(PIN_C4);
          output_high(PIN_C5);
-         valor_pwm_izq = (127-iAdc)*2;
-         set_pwm1_duty(valor_pwm_izq);
-         valor_porcentaje_izq = (100.0/255.0) * (float)valor_pwm_izq;
+         
+         set_pwm1_duty((127-iAdc)*2);
          lcd_gotoxy(1,1);
          printf(lcd_putc,"Izquierda");
          lcd_gotoxy(1,2);
-         printf(lcd_putc, "Vel=%.2f %%", valor_porcentaje_izq);
+         printf(lcd_putc, "Vel=%.2f %%", (float)((100/255) * ((127-iAdc)*2)) );
       }
       
            
       
-      delay_ms(100);
+      delay_ms(200);
    }
 }

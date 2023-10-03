@@ -1,5 +1,5 @@
 ÀÄcircuito05
-   ÀÄMAIN  0/280  Ram=2
+   ÀÄMAIN  0/360  Ram=12
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄlcd_init  0/62  Ram=6
       ³  ÃÄ@delay_ms1  0/21  Ram=1
@@ -39,8 +39,30 @@
       ³  ÀÄ*
       ÃÄlcd_gotoxy  0/18  Ram=4
       ³  ÀÄ*
-      ÃÄ@PSTRINGC7_646  0/86  Ram=4
+      ÃÄ@PSTRINGCN7_646  0/87  Ram=5
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_putc  0/44  Ram=1
+      ³     ÀÄ*
+      ÃÄ@PRINTF_L32D_646FPFPF  0/224  Ram=13
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@FTOSD  (Inline)  Ram=5
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄ@DIV3232  0/79  Ram=13
+      ÃÄlcd_putc  0/44  Ram=1
       ³  ÀÄ*
+      ÃÄlcd_putc  0/44  Ram=1
+      ³  ÀÄ*
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄ@MULFF  0/117  Ram=13
       ÃÄlcd_gotoxy  0/18  Ram=4
       ³  ÀÄ*
       ÃÄ@PSTRINGC7_646  0/86  Ram=4
@@ -48,19 +70,15 @@
       ÃÄlcd_gotoxy  0/18  Ram=4
       ³  ÀÄ*
       ÃÄ@PSTRINGCN7_646  0/87  Ram=5
-      ³  ÃÄlcd_putc  0/44  Ram=1
-      ³  ³  ÀÄ*
-      ³  ÀÄlcd_putc  0/44  Ram=1
-      ³     ÀÄ*
-      ÃÄ@PRINTF_U_646  0/53  Ram=2
-      ³  ÃÄ@DIV88  0/21  Ram=3
-      ³  ÃÄlcd_putc  0/44  Ram=1
-      ³  ³  ÀÄ*
-      ³  ÃÄ@DIV88  0/21  Ram=3
-      ³  ÃÄlcd_putc  0/44  Ram=1
-      ³  ³  ÀÄ*
-      ³  ÀÄlcd_putc  0/44  Ram=1
-      ³     ÀÄ*
+      ³  ÀÄ*
+      ÃÄ@PRINTF_L32D_646FPFPF  0/224  Ram=13
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/44  Ram=1
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/44  Ram=1
+      ³  ÀÄ*
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄ@MULFF  0/117  Ram=13
       ÃÄlcd_gotoxy  0/18  Ram=4
       ³  ÀÄ*
       ÃÄ@PSTRINGC7_646  0/86  Ram=4
@@ -69,6 +87,10 @@
       ³  ÀÄ*
       ÃÄ@PSTRINGCN7_646  0/87  Ram=5
       ³  ÀÄ*
-      ÃÄ@PRINTF_U_646  0/53  Ram=2
+      ÃÄ@PRINTF_L32D_646FPFPF  0/224  Ram=13
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/44  Ram=1
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/44  Ram=1
       ³  ÀÄ*
       ÀÄ@delay_ms1  0/21  Ram=1
