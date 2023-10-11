@@ -1,6 +1,6 @@
 
-ROM used:   1250/8192 (15%)
-            1250/8192 (15%) including unused fragments
+ROM used:   1248/8192 (15%)
+            1248/8192 (15%) including unused fragments
 
             1.0 Average locations per line
             9.7 Average locations per statement
@@ -13,11 +13,11 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   84    45  35  circuito05.c
+   74    45  35  circuito05.c
   768     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
   456    84  65  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
 ----- -----
- 1308   129 Total
+ 1298   129 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -29,7 +29,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     62   5    6   814  7.2  lcd_init
 0     18   1    4   208  6.3  lcd_gotoxy
 0     44   4    1   354  4.7  lcd_putc
-0    360  29   12  1765  6.6  MAIN
+0    358  29   12  1749  6.6  MAIN
 0      6   0    0             @const667
 0     86   7    4             @PSTRINGC7_646
 0      4   0    0             @const670
@@ -50,10 +50,10 @@ Program metrics:
     Functions               8
     Statements              129
     Comments                242
-    Volume (V)              6419
+    Volume (V)              6399
     Difficulty (D)          39.5
-    Effort to implement (E) 253568
-    Time to implement (T)   3 hours, 55 minutes
+    Effort to implement (E) 252798
+    Time to implement (T)   3 hours, 54 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   10
     Maintainability (MI)    130
@@ -61,7 +61,7 @@ Program metrics:
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF  1246  798  
+00004-007FF  1244  800  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

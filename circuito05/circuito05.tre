@@ -1,5 +1,5 @@
 ÀÄcircuito05
-   ÀÄMAIN  0/360  Ram=12
+   ÀÄMAIN  0/358  Ram=12
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄlcd_init  0/62  Ram=6
       ³  ÃÄ@delay_ms1  0/21  Ram=1

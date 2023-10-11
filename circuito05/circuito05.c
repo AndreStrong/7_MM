@@ -31,19 +31,12 @@ void main(){
    //codigo para comprobar un funcionamiento previo al circuito
    lcd_putc("\fReady...\n");
    delay_ms(2000);
-  
-   
-   
+
    while(TRUE){
-      
       set_adc_channel(0); //configura el AN0 como entrada analogica
       delay_ms(10);
-      iAdc = read_adc(); // asocia el valor leido desde el puerto adc a la variable previamente definida  
-      
-       
-      printf(lcd_putc, "\f");
-      
-      
+      iAdc = read_adc(); // asocia el valor leido desde el puerto adc a la variable previamente definida 
+      printf(lcd_putc, "\f");    
       if(iAdc == 127){
          output_low(PIN_C4);
          output_low(PIN_C5);
@@ -56,7 +49,7 @@ void main(){
       else if(iAdc > 127){
          output_high(PIN_C4);
          output_low(PIN_C5);
-         valor_pwm_der = ((iAdc-127)*2)-1;
+         valor_pwm_der = ((iAdc-128)*2);
          set_pwm1_duty(valor_pwm_der);
          valor_porcentaje_der = (100.0/254.0) * (float)valor_pwm_der;
          lcd_gotoxy(1,1);
@@ -75,9 +68,6 @@ void main(){
          lcd_gotoxy(1,2);
          printf(lcd_putc, "Vel=%.2f %%", valor_porcentaje_izq);
       }
-      
-           
-      
       delay_ms(100);
    }
 }

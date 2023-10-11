@@ -48,7 +48,8 @@ AdditionalOptionString=
 Fixed=
 [Opened Files]
 1=circuito05.c
-2=
+2=..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+3=
 [Units]
 Count=1
 1=circuito05 (main)

@@ -109,11 +109,11 @@ Project Directory:
     C:\Users\soyan\proyectos_programacion\7_MM\circuito05\
 
 Project Files:
-    circuito05.c                                            [02-Oct-23 18:59  CRC=4EA27F18]
+    circuito05.c                                            [10-Oct-23 23:38  CRC=4A81188A]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [12-Nov-13 14:35  CRC=6CB1A611]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c   [19-Sep-13 15:38  CRC=D1A6378A]
 
-Source signature=5EA0943D
+Source signature=5A7F2DAF
 
 Units:
     circuito05 (main)
