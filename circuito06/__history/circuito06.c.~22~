@@ -1,0 +1,61 @@
+#include<16F887.h>
+#device ADC = 10//tamaño de bits de resolucion
+#fuses INTRC_IO, NOWDT, PROTECT, NOLVP, MCLR, NOLVP, NOBROWNOUT
+#use delay(INTERNAL=4000000)
+// se inicializa el puerto serie en el microcontrolador
+#use RS232(baud = 9600, xmit = PIN_C6, rcv = PIN_C7, timeout = 100) 
+//argumentos PS(ancho de banda (Tx bits/s), pin Tx, pin Rx, tiempo de respuesta)
+ 
+// se define el puerto D completo para la conexion al LCD
+#define LCD_DATA_PORT getenv("SFR:PORTD")
+// se define el uso de la biblioteca para manipular LCD
+#include <lcd.c>
+
+//comienzo del programa
+//El programa muestra los meses del año
+//A traves del ADC (10 bits) se estableceran rangos para cada mes de la siguiente manera
+// Enero 0-84
+// Febrero 85-169
+// Marzo 170-254
+// Abril 255-339
+// Mayo 340-424
+// Junio 425-509
+// Julio 510-594
+// Agosto 595-679
+// Septiembre 680-764
+// Octubre 765-849
+// Noviembre 850-934
+// Diciembre 935-1024
+
+void main(){
+   //Variable donde se almacenara el valor del PWM
+   int16 iAdc;
+  
+   // se inicializa la funcion del LCD
+   lcd_init(); 
+   
+   //Se define el puerto ADC
+   setup_adc_ports(sAN0);
+   //Se establece el reloj interno del ADC
+   setup_adc(ADC_CLOCK_INTERNAL);
+   //Imprimir mensaje de preparacion en la LCD
+   lcd_putc("\fReady...\n");
+   delay_ms(2000);
+   //Comienzo del programa
+   while(TRUE){
+      //lectura del adc
+      iAdc = read_adc();
+      //Limpiar la pantalla
+      printf(lcd_putc, "\f");
+      if(iAdc >= 0 || iAdc <= 84){
+         lcd_gotoxy(1,1);
+         printf(lcd_putc, "ADC = %d", iAdc);
+         lcd_gotoxy(1,2);
+         printf(lcd_putc,"Enero");
+      }else if(iAdc >= 85 || iAdc <= 169){
+         lcd_gotoxy(1,2);
+         printf(lcd_putc,"Febrero"); 
+      }
+      delay_ms(100);
+   }
+}

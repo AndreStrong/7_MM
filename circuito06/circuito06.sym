@@ -1,0 +1,152 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     lcd
+008     lcdlat
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     rs232_errors
+021-022 MAIN.iAdc
+023     @PSTRINGCN7_651.P1
+023-024 @PRINTF_LU_651.P2
+023-024 @PRINTF_LU_9600_62_63.P3
+023     lcd_init.i
+023     @PSTRINGCN7_9600_62_63.P1
+023     MAIN.@SCRATCH1
+023     @PSTRINGC7_651.@SCRATCH1
+023     @PSTRINGC7_9600_62_63.@SCRATCH1
+024-027 lcd_init.LCD_INIT_STRING
+024     @PSTRINGC7_651.@SCRATCH2
+024     @PSTRINGCN7_651.@SCRATCH1
+024     @PSTRINGCN7_9600_62_63.@SCRATCH1
+024     @PSTRINGC7_9600_62_63.@SCRATCH2
+025     @PSTRINGC7_651.@SCRATCH3
+025     @PSTRINGCN7_651.@SCRATCH2
+025     @PRINTF_LU_651.@SCRATCH1
+025     @PSTRINGCN7_9600_62_63.@SCRATCH2
+025     @PRINTF_LU_9600_62_63.@SCRATCH1
+025     @PSTRINGC7_9600_62_63.@SCRATCH3
+026     @PSTRINGC7_651.@SCRATCH4
+026     @PSTRINGCN7_651.@SCRATCH3
+026     @PRINTF_LU_651.@SCRATCH2
+026     @PSTRINGCN7_9600_62_63.@SCRATCH3
+026     @PRINTF_LU_9600_62_63.@SCRATCH2
+026     @PSTRINGC7_9600_62_63.@SCRATCH4
+027     @PSTRINGCN7_651.@SCRATCH4
+027     @PRINTF_LU_651.@SCRATCH3
+027     @PSTRINGCN7_9600_62_63.@SCRATCH4
+027     @PRINTF_LU_9600_62_63.@SCRATCH3
+028     lcd_init.@SCRATCH1
+028     @PRINTF_LU_651.@SCRATCH4
+028     @PRINTF_LU_9600_62_63.@SCRATCH4
+029     @PRINTF_LU_651.@SCRATCH5
+029     @PRINTF_LU_9600_62_63.@SCRATCH5
+02A     @PRINTF_LU_651.@SCRATCH6
+02A     @PRINTF_LU_9600_62_63.@SCRATCH6
+02B     @PRINTF_LU_651.@SCRATCH7
+02B     @PRINTF_LU_9600_62_63.@SCRATCH7
+02C     lcd_putc.c
+02D     lcd_gotoxy.x
+02D     @delay_ms1.P1
+02E     lcd_gotoxy.y
+02F     lcd_gotoxy.address
+030     lcd_gotoxy.@SCRATCH1
+031     lcd_send_byte.address
+032     lcd_send_byte.n
+033     lcd_read_byte.low
+033     lcd_send_byte.@SCRATCH1
+034     lcd_read_byte.high
+034     lcd_send_nibble.n
+035     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const667.call
+00000A  @const670.call
+00000E  @const675.call
+000019  @const680.call
+00001C  @const681.call
+000027  @const683.call
+00002B  @const684.call
+000037  @const685.call
+00003A  @const686.call
+000045  @const687.call
+000048  @const688.call
+000053  @const689.call
+000056  @const690.call
+000061  @const691.call
+000064  @const692.call
+00006F  @const693.call
+000072  @const694.call
+00007D  @const695.call
+000081  @const696.call
+00008D  @const697.call
+000093  @const698.call
+0000A1  @const699.call
+0000A5  @const700.call
+0000B1  @const701.call
+0000B6  @const702.call
+0000C3  @const703.call
+0000C8  @const704.call
+0000D5  @delay_ms1
+0000EA  lcd_send_nibble
+0000F6  lcd_read_nibble
+0000FC  lcd_send_byte
+000102  lcd_read_byte
+00013C  lcd_init
+00017A  lcd_gotoxy
+00018C  lcd_putc
+0001B8  @PSTRINGC7_651
+00020E  @PSTRINGCN7_651
+000267  @PRINTF_LU_651
+0002CC  @PSTRINGCN7_9600_62_63
+000327  @PRINTF_LU_9600_62_63
+000382  @PSTRINGC7_9600_62_63
+0003DA  MAIN
+0003DA  @cinit1
+0003FD  @cinit2
+
+Project Directory:
+    C:\Users\soyan\proyectos_programacion\7_MM\circuito06\
+
+Project Files:
+    circuito06.c                                            [25-Oct-23 16:52  CRC=9958DCBC]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [12-Nov-13 14:35  CRC=6CB1A611]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c   [19-Sep-13 15:38  CRC=D1A6378A]
+
+Source signature=A956F1E1
+
+Units:
+    circuito06 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   circuito06.xsym
+    Errors:      circuito06.err
+    Ext Symbols: circuito06.esym
+    INHX8:       circuito06.hex
+    Symbols:     circuito06.sym
+    List:        circuito06.lst
+    Debug/COFF:  circuito06.cof
+    Project:     circuito06.ccspjt
+    Call Tree:   circuito06.tre
+    Statistics:  circuito06.STA
