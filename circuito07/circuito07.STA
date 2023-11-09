@@ -1,0 +1,132 @@
+
+ROM used:   3109/8192 (38%)
+            3753/8192 (46%) including unused fragments
+
+            1.9 Average locations per line
+            9.2 Average locations per statement
+
+RAM used:   14/368 (4%) at main() level
+            32/368 (9%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  398   255  75  circuito07.c
+  768     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
+  456    84  25  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+----- -----
+ 1622   339 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   1    1 10190  8.5  @delay_ms1
+0     27   1    2 10190  8.5  @GETCH_BIU_1
+ Inline         3   596  5.9  lcd_read_byte
+0      6   0    0    59  4.2  lcd_read_nibble
+0     12   0    1   179  3.3  lcd_send_nibble
+0     64   2    3   460  4.7  lcd_send_byte
+0     62   2    6   814  7.2  lcd_init
+0     18   1    4   208  6.3  lcd_gotoxy
+0     44   1    1   354  4.7  lcd_putc
+1   1705  55    7 10584  9.0  MAIN
+0      6   0    0 10190  8.5  @const671
+0     86   3    4 10190  8.5  @PSTRINGC7_651
+0     16   1    0 10190  8.5  @const675
+0     88   3    4 10190  8.5  @PSTRINGC7_9600_62_63
+0      5   0    0             @const677
+0     14   0    0             @const678
+0      8   0    0 10190  8.5  @const679
+0      8   0    0 10190  8.5  @const680
+0     16   1    0             @const681
+0      5   0    0             @const682
+0     14   0    0             @const683
+0      8   0    0 10190  8.5  @const684
+0      8   0    0 10190  8.5  @const685
+0     11   0    0 10190  8.5  @const686
+0     89   3    5 10190  8.5  @PSTRINGCN7_9600_62_63
+0      8   0    0 10190  8.5  @const690
+0     89   3    5 10190  8.5  @PSTRINGCN7_651
+0    101   3    9 10190  8.5  @PRINTF_LU_651
+0     13   0    0 10190  8.5  @const695
+0     11   0    0 10190  8.5  @const696
+0     91   3    9 10190  8.5  @PRINTF_LU_9600_62_63
+0      3   0    0             @const699
+0     11   0    0             @const700
+0      4   0    0             @const701
+0     12   0    0             @const702
+0      3   0    0             @const703
+0     11   0    0             @const704
+0      3   0    0             @const705
+0     11   0    0             @const706
+0      3   0    0             @const707
+0     11   0    0             @const708
+0      3   0    0             @const709
+0     11   0    0             @const710
+0      3   0    0             @const711
+0     11   0    0             @const712
+0      4   0    0             @const713
+0     12   0    0             @const714
+0      6   0    0             @const715
+0     14   0    0             @const716
+0      4   0    0             @const717
+0     12   0    0             @const718
+0      5   0    0             @const719
+0     13   0    0             @const720
+0      5   0    0             @const721
+0     13   0    0             @const722
+0     12   0    0             @const723
+0      8   0    0             @const725
+0     14   0    0             @const726
+0     11   0    0             @const727
+0     12   0    0             @const728
+0      3   0    0             @const729
+0     11   0    0             @const730
+0      4   0    0             @const731
+0     12   0    0             @const732
+0      3   0    0             @const733
+0     11   0    0             @const734
+0      3   0    0             @const735
+0     11   0    0             @const736
+0      3   0    0             @const737
+0     11   0    0             @const738
+0      3   0    0             @const739
+0     11   0    0             @const740
+0      3   0    0             @const741
+0     11   0    0             @const742
+0      4   0    0             @const743
+0     12   0    0             @const744
+0      6   0    0             @const745
+0     14   0    0             @const746
+0      4   0    0             @const747
+0     12   0    0             @const748
+0      5   0    0             @const749
+0     13   0    0             @const750
+0      5   0    0             @const751
+0     13   0    0             @const752
+0     18   1    0             @const753
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               26
+    Statements              339
+    Comments                317
+    Volume (V)              292690
+    Difficulty (D)          193.3
+    Effort to implement (E) 56581404
+    Time to implement (T)   873 hours, 10 minutes
+    Est Delivered Bugs (B)  49
+    Cyclomatic Complexity   598
+    Maintainability (MI)    37
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1400  644  
+00800-00FFF  1705  343  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

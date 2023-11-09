@@ -1,0 +1,213 @@
+юдcircuito07
+   юдMAIN  1/1705  Ram=7
+      цд@cinit1  (Inline)  Ram=0
+      цдlcd_init  0/62  Ram=6
+      Ё  цд@delay_ms1  0/21  Ram=1
+      Ё  цдlcd_send_nibble  0/12  Ram=1
+      Ё  цд@delay_ms1  0/21  Ram=1
+      Ё  цдlcd_send_nibble  0/12  Ram=1
+      Ё  цд@delay_ms1  0/21  Ram=1
+      Ё  юдlcd_send_byte  0/64  Ram=3
+      Ё     цдlcd_read_byte  (Inline)  Ram=3
+      Ё     Ё  цдlcd_read_nibble  0/6  Ram=0
+      Ё     Ё  юдlcd_read_nibble  0/6  Ram=0
+      Ё     цдlcd_send_nibble  0/12  Ram=1
+      Ё     юдlcd_send_nibble  0/12  Ram=1
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  цдlcd_putc  0/44  Ram=1
+      Ё  Ё  цдlcd_gotoxy  0/18  Ram=4
+      Ё  Ё  Ё  юдlcd_send_byte  0/64  Ram=3
+      Ё  Ё  Ё     юд*
+      Ё  Ё  цдlcd_send_byte  0/64  Ram=3
+      Ё  Ё  Ё  юд*
+      Ё  Ё  цд@delay_ms1  0/21  Ram=1
+      Ё  Ё  цдlcd_gotoxy  0/18  Ram=4
+      Ё  Ё  Ё  юд*
+      Ё  Ё  цдlcd_send_byte  0/64  Ram=3
+      Ё  Ё  Ё  юд*
+      Ё  Ё  юдlcd_send_byte  0/64  Ram=3
+      Ё  Ё     юд*
+      Ё  юдlcd_putc  0/44  Ram=1
+      Ё     юд*
+      цд@delay_ms1  0/21  Ram=1
+      цд@delay_ms1  0/21  Ram=1
+      цдlcd_putc  0/44  Ram=1
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@GETCH_BIU_1  0/27  Ram=2
+      цд@PSTRINGCN7_9600_62_63  0/89  Ram=5
+      цд@delay_ms1  0/21  Ram=1
+      цдlcd_putc  0/44  Ram=1
+      Ё  юд*
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGCN7_651  0/89  Ram=5
+      Ё  цдlcd_putc  0/44  Ram=1
+      Ё  Ё  юд*
+      Ё  юдlcd_putc  0/44  Ram=1
+      Ё     юд*
+      цд@PRINTF_LU_651  0/101  Ram=9
+      Ё  юдlcd_putc  0/44  Ram=1
+      Ё     юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@PSTRINGCN7_9600_62_63  0/89  Ram=5
+      цд@PRINTF_LU_9600_62_63  0/91  Ram=9
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@delay_ms1  0/21  Ram=1
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@GETCH_BIU_1  0/27  Ram=2
+      цдlcd_putc  0/44  Ram=1
+      Ё  юд*
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@GETCH_BIU_1  0/27  Ram=2
+      цд@delay_ms1  0/21  Ram=1
+      цд@PSTRINGCN7_9600_62_63  0/89  Ram=5
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цдlcd_gotoxy  0/18  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_651  0/86  Ram=4
+      Ё  юд*
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@delay_ms1  0/21  Ram=1
+      цд@PSTRINGC7_9600_62_63  0/88  Ram=4
+      цд@GETCH_BIU_1  0/27  Ram=2
+      юд@delay_ms1  0/21  Ram=1

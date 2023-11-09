@@ -21,7 +21,7 @@ allwarnings=1
 stayupne=3
 stayupoe=0
 [PROJECT]
-Target=circuito05.hex
+Target=circuito07.hex
 Development_Mode=
 Processor_Text=PIC16F887
 ToolSuite=CCS
@@ -32,8 +32,8 @@ BuildTool=C-COMPILER
 OptionString=+FM
 AdditionalOptionString=
 BuildRequired=1
-FileList=circuito05.c
-[circuito05.c]
+FileList=circuito07.c
+[circuito07.c]
 Type=4
 Path=
 FileList=
@@ -41,15 +41,16 @@ BuildTool=
 OptionString=
 AdditionalOptionString=
 [mru-list]
-1=circuito05.c
+1=circuito07.c
 [Windows]
 0=0000 %S 0 0 796 451 3 0
 [CompilerVersion]
 Fixed=
 [Opened Files]
-1=..\circuito06\circuito06.c
+1=circuito07.c
 2=
 3=
+4=
 [Units]
 Count=1
-1=circuito05 (main)
+1=circuito07 (main)
