@@ -114,7 +114,7 @@ void main(){
                printf("Lectura S1: %u\n\r", iAdcGiro);
                printf("Lectura S1: %u\n\r", iAdcAceleracion);
                //Validar giro
-               if(iAdcGiro == 127 || iAdcGiro == 128)
+               if(iAdcGiro == 127 || iAdcGiro == 128 || iAdcGiro == 129)
                {
                   //Imprimir direccion de giro
                   lcd_gotoxy(6,1);
@@ -130,7 +130,7 @@ void main(){
                   output_high(PIN_C1);
                   
                   
-               }else if(iAdcGiro > 128)
+               }else if(iAdcGiro > 129)
                {
                   
                   //Imprimir direccion de giro
@@ -169,7 +169,7 @@ void main(){
                
                
                //validar aceleracion
-               if(iAdcAceleracion == 127 || iAdcAceleracion == 128)
+               if(iAdcAceleracion == 127 || iAdcAceleracion == 128 || iAdcAceleracion == 129)
                {
                   //no se limpia pantalla pues se debe de visualizar la info del if anterior
                   //Imprimir direccion de giro
@@ -185,7 +185,7 @@ void main(){
                   set_pwm1_duty(0);
                   
                }
-               else if(iAdcAceleracion > 128)
+               else if(iAdcAceleracion > 129)
                {
                   //conversion
                   cPWM = (iAdcAceleracion - 126) * aceleracion;
@@ -259,7 +259,7 @@ void main(){
                //imprimir en monitor serie
                printf("Modo de trabajo b: Automatico\n\r");
                // manter marcha o no
-               if(iAdcAceleracion > 128)
+               if(iAdcAceleracion > 129)
                {
                   //imprimir en LCD detener
                   lcd_gotoxy(1,2);

@@ -7,4 +7,4 @@ C:\Users\soyan\proyectos_programacion\7_MM\circuito08\interface\prueba01\prueba0
 C:\Users\soyan\proyectos_programacion\7_MM\circuito08\interface\prueba01\prueba01\obj\Debug\prueba01.csproj.CoreCompileInputs.cache
 C:\Users\soyan\proyectos_programacion\7_MM\circuito08\interface\prueba01\prueba01\obj\Debug\prueba01.exe
 C:\Users\soyan\proyectos_programacion\7_MM\circuito08\interface\prueba01\prueba01\obj\Debug\prueba01.pdb
-C:\Users\soyan\proyectos_programacion\7_MM\circuito08\interface\prueba01\prueba01\obj\Debug\prueba01.Form1.resources
+C:\Users\soyan\proyectos_programacion\7_MM\circuito08\interface\prueba01\prueba01\obj\Debug\prueba01.COM.resources

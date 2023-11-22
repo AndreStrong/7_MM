@@ -25,6 +25,9 @@ void main(){
    //variables para la modulacion del PWM
    int8 valor_pwm_der;
    int8 valor_pwm_izq;
+   //variable para el control semiautomatico
+   char giro;
+   char marcha;
    //configuraciones del pwm
    setup_ccp1(CCP_PWM); // se configura el pin ccp1 como PWD
    setup_timer_2(T2_DIV_BY_16, 255,1);
@@ -98,15 +101,8 @@ void main(){
                
                //limpiar pantalla
                printf(lcd_putc, "\f");
-               //apagar los actuadores
                
-               output_low(PIN_C4);
-               output_low(PIN_C5);
-               set_pwm1_duty(0);
-               
-               output_low(PIN_C0);
-               output_low(PIN_C1);
-               //lecturas de los sensores
+             
                
                 
                
@@ -248,7 +244,10 @@ void main(){
          {
             while(true)
             {
-            //salir de esta opcion
+               //leer una entrada
+               set_adc_channel(1);
+               delay_ms(10);
+               iAdcAceleracion = read_adc();
                                             
                //limpiar lcd
                printf(lcd_putc,"\f");
@@ -256,14 +255,35 @@ void main(){
                              
                //Imprimir en LCD
                lcd_gotoxy(1,1);
-               printf(lcd_putc, "Modo b: Semiautomatico");
-               //pruebas en LCD
-               lcd_gotoxy(1,2);
-               printf(lcd_putc, "Hola soy una prueba");
+               printf(lcd_putc, "M:Automatico");
                //imprimir en monitor serie
-               printf("Modo de trabajo b: Semiautomatico\n\r");
-               
-               
+               printf("Modo de trabajo b: Automatico\n\r");
+               // manter marcha o no
+               if(iAdcAceleracion > 128)
+               {
+                  //imprimir en LCD detener
+                  lcd_gotoxy(1,2);
+                  printf(lcd_putc, "Detener");
+                  //imrpirmir en monitor serie
+                  printf("Denido: Hay un obstaculo");
+                  //actuadores
+                  set_pwm1_duty(0);
+                  output_low(PIN_C0);
+                  output_low(PIN_C1);
+                  
+               }else{
+                  //imprimir en LCD avanzar
+                  lcd_gotoxy(1,2);
+                  printf(lcd_putc, "Avanzar");
+                  //imprimir en monitor serie
+                  printf("Avanzando");
+                  //actuadores
+                  set_pwm1_duty(200);
+                  output_high(PIN_C0);
+                  output_high(PIN_C1);
+                  
+               }
+               delay_ms(100);
                //se solicita confirmacion para salir
                printf("Ingrese s para salir \n\r");
                salir = getch();
@@ -271,6 +291,8 @@ void main(){
                {
                   break;
                }
+               
+               delay_ms(100);
                                  
             }
          
