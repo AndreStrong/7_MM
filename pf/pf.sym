@@ -1,0 +1,260 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     lcd
+008     lcdlat
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     rs232_errors
+021-022 strtok.save
+023-026 _Randseed
+027-02B bits
+02C-02D @sprintf_string
+02E     @TRIS_C
+02F     MAIN.puerta
+030     MAIN.data_ok
+031-034 MAIN.temperatura
+035-038 MAIN.centigrados
+039-03C MAIN.humedad
+03D     MAIN.modo
+03E     MAIN.salir
+03F-042 @PRINTF_L32D_651FPFPF.P1
+03F     lcd_init.i
+03F     @PRINTF_U_9600_62_63.P1
+03F-042 @PRINTF_L32D_9600_62_63FPFPF.P2
+03F     @PSTRINGCN7_9600_62_63.P3
+03F-040 DHT11_read_data.hum
+03F-042 @FLT.P1
+03F     @GETCH_BIU_1.@SCRATCH1
+03F     MAIN.@SCRATCH1
+03F     @PSTRINGC7_651.@SCRATCH1
+03F     @PSTRINGC7_9600_62_63.@SCRATCH1
+040-043 lcd_init.LCD_INIT_STRING
+040     @PRINTF_U_9600_62_63.P1
+040     @GETCH_BIU_1.@SCRATCH2
+040     MAIN.@SCRATCH2
+040     @PSTRINGC7_651.@SCRATCH2
+040     @PSTRINGCN7_9600_62_63.@SCRATCH1
+040     @PSTRINGC7_9600_62_63.@SCRATCH2
+041-042 DHT11_read_data.temp
+041     MAIN.@SCRATCH3
+041     @PSTRINGC7_651.@SCRATCH3
+041     @PSTRINGCN7_9600_62_63.@SCRATCH2
+041     @PSTRINGC7_9600_62_63.@SCRATCH3
+042     MAIN.@SCRATCH4
+042     @PSTRINGC7_651.@SCRATCH4
+042     @PSTRINGCN7_9600_62_63.@SCRATCH3
+042     @PSTRINGC7_9600_62_63.@SCRATCH4
+043-04A DHT11_read_data.buf
+043     @PRINTF_L32D_651FPFPF.P1
+043-046 @FLT.P2
+043     @PRINTF_L32D_9600_62_63FPFPF.P3
+043     @PSTRINGCN7_9600_62_63.@SCRATCH4
+044     lcd_init.@SCRATCH1
+044     @PRINTF_L32D_651FPFPF.@SCRATCH1
+044     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH1
+045     @PRINTF_L32D_651FPFPF.@SCRATCH2
+045     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH2
+046     @PRINTF_L32D_651FPFPF.@SCRATCH3
+046     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH3
+047     @PRINTF_L32D_651FPFPF.@SCRATCH4
+047     @FLT.@SCRATCH1
+047     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH4
+048     @PRINTF_L32D_651FPFPF.@SCRATCH5
+048     @FLT.@SCRATCH2
+048     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH5
+049     @PRINTF_L32D_651FPFPF.@SCRATCH6
+049     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH6
+04A     @PRINTF_L32D_651FPFPF.@SCRATCH7
+04A     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH7
+04B     DHT11_read_data.result
+04B     @PRINTF_L32D_651FPFPF.@SCRATCH8
+04B     @PRINTF_L32D_9600_62_63FPFPF.@SCRATCH8
+04C-04F @FTOSD.P1
+04C     DHT11_read_byte.i
+04C     @PRINTF_D_949.P1
+04C-04F @DIV3232.P2
+04C     lcd_putc.c
+04C     DHT11_read_data.@SCRATCH1
+04D     @PRINTF_D_949.P1
+04D     lcd_gotoxy.x
+04D     DHT11_read_byte.data
+04D     @delay_ms1.P1
+04D     DHT11_read_data.@SCRATCH2
+04E     lcd_gotoxy.y
+04E-04F strtof.s
+04E     DHT11_read_byte.@SCRATCH1
+04E     @PRINTF_D_949.@SCRATCH1
+04F     lcd_gotoxy.address
+04F     @PRINTF_D_949.@SCRATCH2
+050-053 @DIV3232.P1
+050-051 strtof.endptr
+050     lcd_gotoxy.@SCRATCH1
+050     @PRINTF_D_949.@SCRATCH3
+050     @FTOSD.@SCRATCH1
+051     lcd_send_byte.address
+051     @PRINTF_D_949.@SCRATCH4
+052     @DIV88.P1
+052     lcd_send_byte.n
+052     @SPRINTF.P1
+052-055 strtof.pow10
+053     @DIV88.P1
+053     lcd_read_byte.low
+053     lcd_send_byte.@SCRATCH1
+054     lcd_send_nibble.n
+054     lcd_read_byte.high
+054     @DIV88.@SCRATCH1
+054     @DIV3232.@SCRATCH1
+055     lcd_read_byte.@SCRATCH1
+055     @DIV3232.@SCRATCH2
+056-059 strtof.result
+056     @DIV3232.@SCRATCH3
+057     @DIV3232.@SCRATCH4
+058     @DIV3232.@SCRATCH5
+05A.0   strtof.skip
+05A.1   strtof.sign
+05A.2   strtof.point
+05B     strtof.c
+05C     strtof.ptr
+05D-060 @MULFF.P1
+05D     strtof.@SCRATCH1
+05E     strtof.@SCRATCH2
+05F     strtof.@SCRATCH3
+060     strtof.@SCRATCH4
+061-064 @ADDFF.P1
+061-062 @ITOF.P2
+061-064 @DIVFF.P3
+061-064 @MULFF.P4
+065-068 @DIVFF.P1
+065-068 @ADDFF.P2
+065     @MULFF.@SCRATCH1
+066     @MULFF.@SCRATCH2
+067     @MULFF.@SCRATCH3
+068     @MULFF.@SCRATCH4
+069     @MULFF.@SCRATCH5
+069     @ADDFF.@SCRATCH1
+069     @DIVFF.@SCRATCH1
+06A     @ADDFF.@SCRATCH2
+06A     @DIVFF.@SCRATCH2
+06B     @ADDFF.@SCRATCH3
+06B     @DIVFF.@SCRATCH3
+06C     @ADDFF.@SCRATCH4
+06C     @DIVFF.@SCRATCH4
+06D     @ADDFF.@SCRATCH5
+06D     @DIVFF.@SCRATCH5
+06E     @ADDFF.@SCRATCH6
+06E     @DIVFF.@SCRATCH6
+06F     @ADDFF.@SCRATCH7
+070     @ADDFF.@SCRATCH8
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const968.call
+00000A  @const974.call
+000012  @const975.call
+00001A  @const977.call
+00001E  @const978.call
+000023  @const979.call
+000027  @const992.call
+00002A  @const993.call
+00004B  @const1002.call
+00004E  @const1003.call
+00006F  @const1004.call
+000072  @const1005.call
+000093  @const1006.call
+000096  @const1007.call
+00009E  @const1010.call
+0000A2  @const1012.call
+0000C3  @const1013.call
+0000C6  @const1014.call
+0000C9  @const1015.call
+0000D1  @const1017.call
+0000D5  @const1019.call
+0000F6  @const1020.call
+0000F9  @const1021.call
+0000FC  @const1022.call
+000104  @delay_ms1
+000119  lcd_send_nibble
+000125  lcd_read_nibble
+00012B  lcd_send_byte
+000131  lcd_read_byte
+00016B  lcd_init
+0001A9  lcd_gotoxy
+0001BB  lcd_putc
+0001E7  @PSTRINGC7_651
+00023D  @GETCH_BIU_1
+000258  DHT11_read_byte
+000275  @DIV88
+00028A  @SPRINTF
+000297  @PRINTF_D_949
+0002EE  @MULFF
+000363  @ITOF
+000380  @ADDFF
+0004C1  strtof
+000542  @DIVFF
+0006AB  DHT11_read_data
+0006AC  DHT11_start
+0006BF  DHT11_response
+00073D  @FTOSD
+00075C  @DIV3232
+0007AB  @FLT
+0007C2  @PRINTF_U_9600_62_63
+000800  @PRINTF_L32D_651FPFPF
+0008D3  @PSTRINGCN7_9600_62_63
+00092C  @PRINTF_L32D_9600_62_63FPFPF
+000A37  @PSTRINGC7_9600_62_63
+000A8F  MAIN
+000A8F  @cinit1
+000AB6  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Users\soyan\proyectos_programacion\7_MM\pf\
+
+Project Files:
+    pf.c                                                    [03-Dec-23 02:06  CRC=9C7D1659]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [12-Nov-13 14:35  CRC=6CB1A611]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c   [19-Sep-13 15:38  CRC=D1A6378A]
+    DHT11.c                                                 [30-Nov-23 14:13  CRC=A2ED96AF]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [08-Jun-11 14:39  CRC=0B6669CF]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [16-Jul-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [14-Jul-11 10:13  CRC=23EDEC8F]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Jan-08 13:55  CRC=2D1F019F]
+
+Source signature=90D1D0AB
+
+Units:
+    pf (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   pf.xsym
+    Errors:      pf.err
+    Ext Symbols: pf.esym
+    INHX8:       pf.hex
+    Symbols:     pf.sym
+    List:        pf.lst
+    Debug/COFF:  pf.cof
+    Project:     pf.ccspjt
+    Call Tree:   pf.tre
+    Statistics:  pf.STA

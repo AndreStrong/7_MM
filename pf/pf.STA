@@ -1,0 +1,107 @@
+
+ROM used:   3993/8192 (49%)
+            4015/8192 (49%) including unused fragments
+
+            1.2 Average locations per line
+            5.3 Average locations per statement
+
+RAM used:   40/368 (11%) at main() level
+            86/368 (23%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  285   146  19  pf.c
+  768     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
+  456    84  11  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+   71    45   6  DHT11.c
+ 1351   359  47  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+  423   125  16  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+----- -----
+ 3414   759 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   1    1             @delay_ms1
+0     27   1    2             @GETCH_BIU_1
+ Inline         3   596  5.9  lcd_read_byte
+0      6   0    0    59  4.2  lcd_read_nibble
+0     12   0    1   179  3.3  lcd_send_nibble
+0     64   2    3   460  4.7  lcd_send_byte
+0     62   2    6   814  7.2  lcd_init
+0     18   0    4   208  6.3  lcd_gotoxy
+0     44   1    1   354  4.7  lcd_putc
+0    117   3   13             @MULFF
+0     29   1    2             @ITOF
+0    321   8   16             @ADDFF
+ Inline        14             @DIVFF
+0    490  12   19  1542 12.4  strtof
+ Inline         0   106  1.3  DHT11_start
+ Inline         0    89  1.9  DHT11_response
+0     29   1    3   361  6.9  DHT11_read_byte
+0    146   4   15   880  5.7  DHT11_read_data
+0     13   0    1             @SPRINTF
+0     21   1    3             @DIV88
+0     87   2    6             @PRINTF_D_949
+1   1312  33   20  6115 10.4  MAIN
+0      6   0    0             @const968
+0     86   2    4             @PSTRINGC7_651
+0      8   0    0             @const974
+0      8   0    0             @const975
+0      4   0    0             @const977
+0      5   0    0             @const978
+0      4   0    0             @const979
+0     31   1    5             @FTOSD
+0     79   2   13             @DIV3232
+1    211   5   13             @PRINTF_L32D_651FPFPF
+0     63   2   10             @FLT
+0      3   0    0             @const992
+0     33   1    0             @const993
+1     89   2    5             @PSTRINGCN7_9600_62_63
+1    207   5   13             @PRINTF_L32D_9600_62_63FPFPF
+1     60   2    2             @PRINTF_U_9600_62_63
+0      3   0    0             @const1002
+0     33   1    0             @const1003
+0      3   0    0             @const1004
+0     33   1    0             @const1005
+0      3   0    0             @const1006
+0      8   0    0             @const1007
+1     88   2    4             @PSTRINGC7_9600_62_63
+0      4   0    0             @const1010
+0     33   1    0             @const1012
+0      3   0    0             @const1013
+0      3   0    0             @const1014
+0      8   0    0             @const1015
+0      4   0    0             @const1017
+0     33   1    0             @const1019
+0      3   0    0             @const1020
+0      3   0    0             @const1021
+0      8   0    0             @const1022
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               13
+    Statements              759
+    Comments                1134
+    Volume (V)              16692
+    Difficulty (D)          69.4
+    Effort to implement (E) 1158703
+    Time to implement (T)   17 hours, 53 minutes
+    Est Delivered Bugs (B)  4
+    Cyclomatic Complexity   38
+    Maintainability (MI)    114
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  2022  22  
+00800-00FFF  1967  81  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

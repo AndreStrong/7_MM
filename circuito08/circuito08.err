@@ -1,5 +1,0 @@
->>> Warning 202 "circuito08.c" Line 29(9,13): Variable never used:   giro
->>> Warning 202 "circuito08.c" Line 30(9,15): Variable never used:   marcha
-      Memory usage:   ROM=38%      RAM=6% - 13%
-      0 Errors,  2 Warnings.
-Build Successful.

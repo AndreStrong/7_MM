@@ -34,7 +34,7 @@ namespace prueba01
             cmbPuerto.Items.AddRange(ports);
             cmbPuerto.SelectedIndex = 0;
             btnDesconectar.Enabled = false;
-            //truco para imprimir
+            
             
             
         }
