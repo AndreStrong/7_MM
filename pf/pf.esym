@@ -1,7 +1,7 @@
-D G "__PCM__" 0 286 ""5.015""
-D G "__DEVICE__" 0 286 "887"
-D G "__DATE__" 0 286 ""03-Dec-23""
-D G "__TIME__" 0 286 ""02:07:17"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 281 ""5.015""
+D G "__DEVICE__" 0 281 "887"
+D G "__DATE__" 0 281 ""03-Dec-23""
+D G "__TIME__" 0 281 ""19:03:44"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 39 "int8" `54 
 f B "set_tris_a" 1 39 "void(int8 value)" `53 
@@ -1333,7 +1333,7 @@ C L "DHT11_read_data" 3 54 1 "FUNCTION"
 C L "DHT11_read_data" 3 54 1 "FUNCTION"
 C L "DHT11_read_data" 3 54 1 "FUNCTION"
 C L "DHT11_read_data" 3 54 1 "FUNCTION"
-D G "faCentigrados" 0 16 "0.55555555555555555555555555"
+D G "faCentigrados" 0 16 "1.8"
 F G "MAIN" 0 18 "void()" `958  "Variable donde se almacenara el valor del ADC de los sensores de peruta y temperatura respectivamente"
 V L "puerta" 0 20 "int8" `959 
 V L "data_ok" 0 20 "int8" `960 
@@ -1369,7 +1369,6 @@ C L "MAIN" 0 15 1 "FUNCTION"
 C L "MAIN" 0 15 1 "FUNCTION"
 C L "MAIN" 0 15 1 "FUNCTION"
 C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 2 "FUNCTION"
 C L "MAIN" 0 15 1 "FUNCTION"
 C L "MAIN" 0 15 2 "FUNCTION"
 C L "MAIN" 0 15 1 "FUNCTION"

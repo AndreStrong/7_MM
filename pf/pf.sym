@@ -166,54 +166,54 @@ ROM Allocation:
 000012  @const975.call
 00001A  @const977.call
 00001E  @const978.call
-000023  @const979.call
-000027  @const992.call
-00002A  @const993.call
-00004B  @const1002.call
-00004E  @const1003.call
-00006F  @const1004.call
-000072  @const1005.call
-000093  @const1006.call
-000096  @const1007.call
-00009E  @const1010.call
-0000A2  @const1012.call
-0000C3  @const1013.call
-0000C6  @const1014.call
-0000C9  @const1015.call
-0000D1  @const1017.call
-0000D5  @const1019.call
-0000F6  @const1020.call
-0000F9  @const1021.call
-0000FC  @const1022.call
-000104  @delay_ms1
-000119  lcd_send_nibble
-000125  lcd_read_nibble
-00012B  lcd_send_byte
-000131  lcd_read_byte
-00016B  lcd_init
-0001A9  lcd_gotoxy
-0001BB  lcd_putc
-0001E7  @PSTRINGC7_651
-00023D  @GETCH_BIU_1
-000258  DHT11_read_byte
-000275  @DIV88
-00028A  @SPRINTF
-000297  @PRINTF_D_949
-0002EE  @MULFF
-000363  @ITOF
-000380  @ADDFF
-0004C1  strtof
-000542  @DIVFF
-0006AB  DHT11_read_data
-0006AC  DHT11_start
-0006BF  DHT11_response
-00073D  @FTOSD
-00075C  @DIV3232
-0007AB  @FLT
-0007C2  @PRINTF_U_9600_62_63
+000024  @const979.call
+000029  @const992.call
+00002C  @const993.call
+00004D  @const1002.call
+000050  @const1003.call
+000071  @const1004.call
+000074  @const1005.call
+000096  @const1006.call
+000099  @const1007.call
+0000A1  @const1010.call
+0000A5  @const1012.call
+0000C7  @const1013.call
+0000CA  @const1014.call
+0000CD  @const1015.call
+0000D5  @const1017.call
+0000D9  @const1019.call
+0000FA  @const1020.call
+0000FD  @const1021.call
+000100  @const1022.call
+000108  @delay_ms1
+00011D  lcd_send_nibble
+000129  lcd_read_nibble
+00012F  lcd_send_byte
+000135  lcd_read_byte
+00016F  lcd_init
+0001AD  lcd_gotoxy
+0001BF  lcd_putc
+0001EB  @PSTRINGC7_651
+000241  @GETCH_BIU_1
+00025C  DHT11_read_byte
+000279  @DIV88
+00028E  @SPRINTF
+00029B  @PRINTF_D_949
+0002F2  @MULFF
+000367  @ITOF
+000384  @DIVFF
+00044E  @ADDFF
+00058F  strtof
+0006B1  DHT11_read_data
+0006B2  DHT11_start
+0006C5  DHT11_response
+000743  @FTOSD
+000762  @DIV3232
+0007B1  @FLT
 000800  @PRINTF_L32D_651FPFPF
 0008D3  @PSTRINGCN7_9600_62_63
 00092C  @PRINTF_L32D_9600_62_63FPFPF
+0009FB  @PRINTF_U_9600_62_63
 000A37  @PSTRINGC7_9600_62_63
 000A8F  MAIN
 000A8F  @cinit1
@@ -225,7 +225,7 @@ Project Directory:
     C:\Users\soyan\proyectos_programacion\7_MM\pf\
 
 Project Files:
-    pf.c                                                    [03-Dec-23 02:06  CRC=9C7D1659]
+    pf.c                                                    [03-Dec-23 18:52  CRC=C91E829E]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [12-Nov-13 14:35  CRC=6CB1A611]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c   [19-Sep-13 15:38  CRC=D1A6378A]
     DHT11.c                                                 [30-Nov-23 14:13  CRC=A2ED96AF]
@@ -234,7 +234,7 @@ Project Files:
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [14-Jul-11 10:13  CRC=23EDEC8F]
     ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Jan-08 13:55  CRC=2D1F019F]
 
-Source signature=90D1D0AB
+Source signature=BD733CF0
 
 Units:
     pf (main)
